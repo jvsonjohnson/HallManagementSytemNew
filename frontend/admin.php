@@ -74,7 +74,7 @@ if ($_SESSION['isLogged'] === FALSE) {
         <a href="update-issue.php" class="function-card w-inline-block">
           <h3 class="white funcard">Update issue Progress</h3>
         </a>
-        <a href="view-feedback.html" class="function-card w-inline-block">
+        <a href="view-feedback.php" class="function-card w-inline-block">
           <h3 class="white funcard">View Feedback</h3>
         </a>
         <a href="book-personnel.php" class="function-card w-inline-block">

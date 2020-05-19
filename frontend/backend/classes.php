@@ -808,6 +808,21 @@ class FeedbackController
         }
     }
 
+    public function LoadFeedback()
+    {
+        $statement = $this->database->query('SELECT * FROM feedback_comments, feedback_date;');
+        $feedback = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($feedback as $feed) {
+            echo "<div class=\"hero-card\">";
+            echo "<h3>Issue ID: " . $feed['issueID'] . "</h3>";
+            echo "<h3>Feedback ID: " . $feed['feedbackID'] . "</h3>";
+            echo "<h3>Comment: " . $feed['comment'] . "</h3>";
+            echo "<h3>Sender: " . $feed['sender'] . "</h3>";
+            echo "<h3>Date: " . $feed['date'] . "</h3>";
+            echo "</div>";
+        }
+    }
     public function sendFeedback()
     {
         return $this->feedback;
